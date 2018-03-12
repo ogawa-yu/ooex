@@ -2,19 +2,22 @@ import scala.collection.JavaConverters._
 
 enablePlugins(JavaServerAppPackaging)
 
-name := """ooex"""
+lazy val root = (project in file("."))
+  .settings(
+    name := """ooex""",
+    organization := "org.ooex",
+    version := "1.0-SNAPSHOT"
+  )
+  .enablePlugins(PlayJava)
+  .enablePlugins(SbtWeb)
 
-organization := "org.ooex"
-
-version := "1.0-SNAPSHOT"
-
-lazy val root = (project in file(".")).enablePlugins(PlayJava)
-
-scalaVersion := "2.12.4"
+pomIncludeRepository := { _ => false }
 
 libraryDependencies ++= {
   Seq(
     guice,
+    "org.webjars" %% "webjars-play" % "2.6.3",
+    "org.webjars" % "react" % "15.0.0",
     //lombok
     "org.projectlombok" % "lombok" % "1.16.16",
     //test

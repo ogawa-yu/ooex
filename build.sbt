@@ -1,5 +1,3 @@
-import scala.collection.JavaConverters._
-
 enablePlugins(JavaServerAppPackaging)
 
 lazy val root = (project in file("."))

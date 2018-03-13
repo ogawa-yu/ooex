@@ -3,10 +3,15 @@
   The settings outDir and rootDir are managed by sbt-typescript.
   */
   "compilerOptions": {
-    "target": "es6",
+    "outDir": "target/ts",
+    "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es6", "dom"],
     "jsx": "react",
+    "allowJs": true,
+    "strictNullChecks": true,
     /* the following two settings are required for angular2 annotations to work*/
     "emitDecoratorMetadata": true,
     "experimentalDecorators":true,
@@ -25,10 +30,11 @@
     },
     /* noImplicitAny when you want your typescript to be fully typed */
     "strict":true,
-    "strictNullChecks":false, //doesn't work yet with @angular RC4
-    "outDir": "./target/ts",
-    "lib": ["es6", "dom"],
-    "typeRoots": ["target/web/node-modules/main/webjars/@types","target/web/node-modules/test/webjars/@types"]
+    "strictNullChecks":true,
+    "typeRoots": [
+      "target/web/node-modules/main/webjars/@types",
+      "target/web/node-modules/test/webjars/@types"
+    ]
   },
   /* the information below is not used by sbt-typescript. but you can use it if you want to run tsc -p .*/
   "exclude": [

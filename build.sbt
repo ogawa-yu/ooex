@@ -28,10 +28,9 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-testkit" % "2.5.8" % "test",
     "junit" % "junit" % "4.12" % "test",
     "com.novocode" % "junit-interface" % "0.11" % "test",
-
-    "org.webjars.npm" % "react" % "16.2.0",
-    "org.webjars.npm" % "react-dom" % "16.2.0" exclude("org.webjars.npm", "react"),
-    "org.webjars.npm" % "react-redux" % "5.0.6" exclude("org.webjars.npm", "react"),
+    "org.webjars.npm" % "react" % "16.1.0",
+    "org.webjars.npm" % "react-dom" % "16.1.0" /*exclude("org.webjars.npm", "react")*/,
+    "org.webjars.npm" % "react-redux" % "5.0.6" /*exclude("org.webjars.npm", "react")*/,
     "org.webjars.npm" % "redux" % "3.7.2",
     "org.webjars.npm" % "redux-form" % "6.8.0",
     "org.webjars.npm" % "types__react" % "16.0.40",
@@ -39,6 +38,7 @@ libraryDependencies ++= {
     "org.webjars.npm" % "types__react-redux" % "5.0.14" exclude ("org.webjars.npm", "types__react"),
     "org.webjars.npm" % "types__redux" % "3.6.31",
     "org.webjars.npm" % "types__node" % "9.4.6",
+    "org.webjars" % "vue" % "2.5.13",
 
     "org.webjars.npm" % "core-js" % "2.4.1",
     "org.webjars.npm" % "systemjs" % "0.19.41",

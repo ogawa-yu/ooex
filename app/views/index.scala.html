@@ -1,8 +1,16 @@
+@this(webJarsUtil: org.webjars.play.WebJarsUtil)
 @(message: String)
 @main(message) {
-  @*
-   * Get an `Html` object by calling the built-in Play welcome
-   * template and passing a `String` message.
-   *@
-    <img id='VendingMachine' src='@routes.Assets.versioned("images/vending_machine.png")' />
+    <!-- <img id='VendingMachine' src='@routes.Assets.versioned("images/vending_machine.png")' /> -->
+    <div id='app'>
+        {{ message }}
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!!'
+            }
+        })
+    </script>
 }

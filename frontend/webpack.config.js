@@ -14,10 +14,14 @@ function resolve(dir) {
 }
 
 module.exports = {
-    target: "web",
+    mode: 'development',
+    target: 'web',
     context: __dirname,
     entry: './src/app.js',
     resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.common.js'
+        },
         modules: ['node_modules', jsPath]
     },
     output: {
@@ -46,6 +50,7 @@ module.exports = {
                 loader: 'eslint-loader',
                 enforce: 'pre',
                 include: [resolve('src'), resolve('test')],
+                exclude: /node_modules/,
                 options: {
                     formatter: require('eslint-friendly-formatter')
                 }
@@ -58,7 +63,7 @@ module.exports = {
     devtool: "#source-map"
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'production') {
     module.exports.output.filename = module.exports.output.filename.replace(/\.js$/, '.min.js')
     module.exports.devtool = "#source-map"
 

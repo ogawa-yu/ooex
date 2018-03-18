@@ -1,20 +1,20 @@
+<style>
+    .my-component h2 {
+        color: red
+    }
+</style>
 <template>
-    <p>{{ greeting }} World!</p>
+    <div class="my-component">
+        <h2>{{message}}</h2>
+    </div>
 </template>
-
 <script>
-    module.export = {
+    module.exports = {
         data: function() {
             return {
-                greeting : 'Hello'
+                message: 'Hello Vue Component!!'
             }
         }
     }
 </script>
 
-<style scoped>
-    p {
-        font-size: 2em;
-        font-align: center;
-    }
-</style>

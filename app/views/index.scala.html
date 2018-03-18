@@ -1,29 +1,8 @@
 @this(webJarsUtil: org.webjars.play.WebJarsUtil)
 @(message: String)
 @main(message) {
-    <!-- <img id='VendingMachine' src='@routes.Assets.versioned("images/vending_machine.png")' /> -->
-    <div id='app'>
-        <span v-bind:title="message">
-            Hover your mouse over me for a few seconds
-            to see my dynamically bound title!!
-        </span>
+    <div id="app">
+        <my-component></my-component>
     </div>
-    <div id='app-2'>
-        <span v-if="seen">Now you see me</span>
-    </div>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: 'You loaded this page on ' + new Date().toLocaleString()
-            }
-        })
-
-        var app2 = new Vue({
-            el: '#app-2',
-            data: {
-                seen: true
-            }
-        })
-    </script>
+    <script src='@routes.Assets.versioned("javascripts/app.js")'></script>
 }

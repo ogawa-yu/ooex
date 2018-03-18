@@ -3,3 +3,4 @@
 **/target
 *.log
 **/node_modules
+/public/javascripts

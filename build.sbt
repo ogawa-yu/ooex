@@ -38,7 +38,10 @@ libraryDependencies ++= {
     "org.webjars.npm" % "types__react-redux" % "5.0.14" exclude ("org.webjars.npm", "types__react"),
     "org.webjars.npm" % "types__redux" % "3.6.31",
     "org.webjars.npm" % "types__node" % "9.4.6",
+    "org.webjars.npm" % "axios" % "0.17.1",
+    "org.webjars.npm" % "lodash" % "4.17.5",
     "org.webjars" % "vue" % "2.5.13",
+
 
     "org.webjars.npm" % "core-js" % "2.4.1",
     "org.webjars.npm" % "systemjs" % "0.19.41",
